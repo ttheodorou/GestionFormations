@@ -9,7 +9,6 @@ import java.util.ArrayList;
 
 import com.objis.gestionformations.domaine.Conseiller;
 
-
 public class ConseillerDAO {
 	ConnexionDaseDeDonnees connexion = new ConnexionDaseDeDonnees();
 
@@ -145,6 +144,7 @@ public class ConseillerDAO {
 		return listeDesConseillers;
 
 	}
+
 	public boolean ecrireUnConseillerDansUneBase(Conseiller conseiller) {
 		// Info d'accès à la base de données
 
@@ -154,7 +154,8 @@ public class ConseillerDAO {
 		String identifiant = conseiller.getIdentifiant();
 		String motDePasse = conseiller.getMotDePasse();
 
-		String sql = "INSERT INTO Conseiller (prenom, nom, identifiant, motDePasse) VALUES ('" + "" + prenom + "', '" + nom + "', '" + identifiant + "', '" + motDePasse + "')";
+		String sql = "INSERT INTO Conseiller (prenom, nom, identifiant, motDePasse) VALUES ('" + "" + prenom + "', '"
+				+ nom + "', '" + identifiant + "', '" + motDePasse + "')";
 
 		// Etape 4 : exécution d'une requete
 
